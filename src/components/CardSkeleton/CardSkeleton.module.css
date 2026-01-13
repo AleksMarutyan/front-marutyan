@@ -1,0 +1,122 @@
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid transparent;
+}
+
+.imageWrapper {
+  width: 100%;
+  padding-top: 66.67%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.imageSkeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.content {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+.categorySkeleton,
+.dateSkeleton,
+.titleSkeleton,
+.excerptSkeleton,
+.authorSkeleton,
+.viewsSkeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #e0e0e0 20%,
+    #f0f0f0 40%,
+    #f0f0f0 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+  border-radius: 4px;
+}
+
+.categorySkeleton {
+  width: 80px;
+  height: 12px;
+}
+
+.dateSkeleton {
+  width: 100px;
+  height: 13px;
+}
+
+.titleSkeleton {
+  width: 100%;
+  height: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.excerptSkeleton {
+  width: 100%;
+  height: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.875rem;
+  border-top: 1px solid #e8e8e8;
+  margin-top: auto;
+}
+
+.authorSkeleton {
+  width: 120px;
+  height: 13px;
+}
+
+.viewsSkeleton {
+  width: 80px;
+  height: 13px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1.25rem 1rem;
+  }
+}

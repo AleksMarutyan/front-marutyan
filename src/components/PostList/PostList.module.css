@@ -1,0 +1,42 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 40px;
+  margin-top: 3rem;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+  margin-bottom: 10rem;
+  justify-content: center;
+}
+
+.noResults,
+.error {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1.125rem;
+  width: 100%;
+}
+
+.noResults {
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+@media (max-width: 1023px) {
+  .list {
+    gap: 20px;
+    max-width: 752px;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    gap: 20px;
+    max-width: 336px;
+  }
+}
